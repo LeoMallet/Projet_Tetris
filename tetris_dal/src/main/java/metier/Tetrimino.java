@@ -31,8 +31,8 @@ public class Tetrimino {
 	@Column(name="TET_COULEUR")
 	private String couleur;
 
-	@OneToMany(mappedBy="coup")
-	private List<Coup> coups;
+//	@OneToMany(mappedBy="coup")
+//	private List<Coup> coups;
 	
 	public int[][] rotation45deg(int[][] matriceEntree){
 		int size = matriceEntree.length;
