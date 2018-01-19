@@ -40,7 +40,7 @@ public class Player {
 		return login;
 	}
 	
-	//zenfoeifhioefzhhefi
+	//La phrase
 
 	public void setLogin(String login) {
 		this.login = login;
