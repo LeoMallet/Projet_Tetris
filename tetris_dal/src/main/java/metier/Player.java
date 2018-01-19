@@ -24,9 +24,8 @@ public class Player {
 	
 	@Column(name="GAM_MDP")
 	private String mdp;
-	
-/*	@OneToMany(mappedBy="game")
-	private List<Game> games;*/
+//	@OneToMany(mappedBy="game")
+//	private List<Game> games;
 
 	public int getId() {
 		return id;
@@ -52,7 +51,7 @@ public class Player {
 		this.mdp = mdp;
 	}
 
-/*	public List<Game> getGames() {
+	public List<Game> getGames() {
 		return games;
 	}
 
