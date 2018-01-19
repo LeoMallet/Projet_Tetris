@@ -27,7 +27,7 @@ public class Game {
 	private Date dateGame;
 	
 	//Potentiel probl�me ?
-		@OneToMany(mappedBy="game")
+		@OneToMany(mappedBy="coup")
 		private List<Coup> coups;	
 		
 		@ManyToOne
@@ -58,12 +58,12 @@ public class Game {
 		this.coups = coups;
 	}
 
-	public Game getGame() {
-		return game;
+	public Player getPlayer() {
+		return player;
 	}
 
-	public void setGame(Game game) {
-		this.game = game;
+	public void setPlayer(Player player) {
+		this.player = player;
 	}
 
 

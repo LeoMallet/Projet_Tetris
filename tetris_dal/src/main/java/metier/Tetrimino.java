@@ -33,7 +33,7 @@ public class Tetrimino {
 	@Column(name="TET_COULEUR")
 	private String couleur;
 
-	@OneToMany(mappedBy="tetrimino")
+	@OneToMany(mappedBy="coup")
 	private List<Coup> coups;
 	
 	
