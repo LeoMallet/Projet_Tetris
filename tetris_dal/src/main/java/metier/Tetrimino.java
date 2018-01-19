@@ -36,6 +36,8 @@ public class Tetrimino {
 	@OneToMany(mappedBy="tetrimino")
 	private List<Coup> coups;
 	
+	
+	
 	public int[][] rotation45deg(int[][] matriceEntree){
 		int size = matriceEntree.length;
 		int[][] matriceRetour = new int[size][size];
@@ -77,6 +79,14 @@ public class Tetrimino {
 	public void setCouleur(String couleur) {
 		this.couleur = couleur;
 	}
+	
+//	public List<Coup> getCoups() {
+//	return coups;
+//	}
+//
+//	public void setCoups(List<Coup> coups) {
+//	this.coups = coups;
+//	}
 
 	@Override
 	public String toString() {
