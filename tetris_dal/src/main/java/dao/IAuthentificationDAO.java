@@ -1,7 +1,13 @@
 package dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import metier.Player;
 
-public interface IAuthentificationDAO extends JpaRepository <Authentification, Integer> {
+<<<<<<< Updated upstream
+import metier.Player;
+
+=======
+>>>>>>> Stashed changes
+public interface IAuthentificationDAO extends JpaRepository <Player, Integer> {
 
 }
