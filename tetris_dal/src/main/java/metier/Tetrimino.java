@@ -19,14 +19,6 @@ import org.springframework.cache.annotation.Cacheable;
 @Cache(usage=CacheConcurrencyStrategy.READ_ONLY	)
 @Table(name="tetrimino")
 public class Tetrimino {
-		
-	public List<Coup> getCoups() {
-		return coups;
-	}
-
-	public void setCoups(List<Coup> coups) {
-		this.coups = coups;
-	}
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -41,6 +33,8 @@ public class Tetrimino {
 
 //	@OneToMany(mappedBy="coup")
 //	private List<Coup> coups;
+	
+	
 	
 	public int[][] rotation45deg(int[][] matriceEntree){
 		int size = matriceEntree.length;
@@ -75,10 +69,18 @@ public class Tetrimino {
 	public void setCouleur(String couleur) {
 		this.couleur = couleur;
 	}
+	
+//	public List<Coup> getCoups() {
+//	return coups;
+//	}
+//
+//	public void setCoups(List<Coup> coups) {
+//	this.coups = coups;
+//	}
 
 	@Override
 	public String toString() {
-		return "Tetrimino nï¿½"+id+" nom=" + nom + ", couleur=" + couleur;
+		return "Tetrimino n°"+id+" nom=" + nom + ", couleur=" + couleur;
 	}
 
 }

@@ -25,7 +25,6 @@ public class Coup {
 	private int id;
 	
 	
-<<<<<<< Updated upstream
 //	@ManyToOne
 //	@JoinColumn(name="TET_ID")
 //	private Tetrimino tetrimino;
@@ -33,15 +32,7 @@ public class Coup {
 //	@ManyToOne
 //	@JoinColumn(name="GAM_ID")
 //	private Game game;
-=======
-	@ManyToOne
-	@JoinColumn(name="TET_ID")
-	private Tetrimino tetrimino;
-	
-/*	@ManyToOne
-	@JoinColumn(name="GAM_ID")
-	private Game game;*/
->>>>>>> Stashed changes
+
 
 	public int getId() {
 		return id;
@@ -51,7 +42,7 @@ public class Coup {
 		this.id = id;
 	}
 
-<<<<<<< Updated upstream
+
 //	public Tetrimino getTetrimino() {
 //		return tetrimino;
 //	}
@@ -67,24 +58,7 @@ public class Coup {
 //	public void setGame(Game game) {
 //		this.game = game;
 //	}
-=======
-	public Tetrimino getTetrimino() {
-		return tetrimino;
-	}
 
-	public void setTetrimino(Tetrimino tetrimino) {
-		this.tetrimino = tetrimino;
-	}
-
-/*	public Game getGame() {
-		return game;
-	}
-
-	public void setGame(Game game) {
-		this.game = game;
-	}*/
-	
->>>>>>> Stashed changes
 	
 	
 }
