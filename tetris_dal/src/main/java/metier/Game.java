@@ -26,13 +26,13 @@ public class Game {
 	@Column(name="GAM_DATE")
 	private Date dateGame;
 	
-	//Potentiel probleme ?
-	@OneToMany(mappedBy="game")
-	private List<Coup> coups;	
-	
-	@ManyToOne
-	@JoinColumn(name="GAM_PLAYER_ID")
-	private Player player;
+	//Potentiel probl�me ?
+		@OneToMany(mappedBy="coup")
+		private List<Coup> coups;	
+		
+		@ManyToOne
+		@JoinColumn(name="GAM_PLAYER_ID")
+		private Game game;
 
 	public int getId() {
 		return id;
