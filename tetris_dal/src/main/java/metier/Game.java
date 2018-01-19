@@ -26,7 +26,7 @@ public class Game {
 	@Column(name="GAM_DATE")
 	private Date dateGame;
 	
-	//Potentiel problème ?
+	//Potentiel problï¿½me ?
 		@OneToMany(mappedBy="game")
 		private List<Coup> coups;	
 		
