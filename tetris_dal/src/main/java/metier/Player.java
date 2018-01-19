@@ -24,8 +24,9 @@ public class Player {
 	
 	@Column(name="GAM_MDP")
 	private String mdp;
-//	@OneToMany(mappedBy="game")
-//	private List<Game> games;
+	
+	@OneToMany(mappedBy="player")
+	private List<Game> games;
 
 	public int getId() {
 		return id;
@@ -38,6 +39,8 @@ public class Player {
 	public String getLogin() {
 		return login;
 	}
+	
+	//zenfoeifhioefzhhefi
 
 	public void setLogin(String login) {
 		this.login = login;
