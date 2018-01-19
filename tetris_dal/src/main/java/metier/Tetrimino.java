@@ -32,11 +32,19 @@ public class Tetrimino {
 		
 	@Column(name="TET_COULEUR")
 	private String couleur;
+	
+	@Column(name="TET_FORME")
+	private String formeTetrimino;
 
 	@OneToMany(mappedBy="tetrimino")
 	private List<Coup> coups;
 	
-	
+	public int[][] getMatriceTetrimino(String formeTetrimino){
+		int[][] matriceTetrimino=new int[5][5];
+		
+		
+		return matriceTetrimino;
+	}
 	
 	public int[][] rotation45deg(int[][] matriceEntree){
 		int size = matriceEntree.length;
