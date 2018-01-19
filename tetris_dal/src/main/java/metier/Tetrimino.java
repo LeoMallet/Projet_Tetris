@@ -20,6 +20,14 @@ import org.springframework.cache.annotation.Cacheable;
 @Table(name="tetrimino")
 public class Tetrimino {
 		
+	public List<Coup> getCoups() {
+		return coups;
+	}
+
+	public void setCoups(List<Coup> coups) {
+		this.coups = coups;
+	}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="TET_ID")
@@ -31,8 +39,8 @@ public class Tetrimino {
 	@Column(name="TET_COULEUR")
 	private String couleur;
 
-	@OneToMany(mappedBy="coup")
-	private List<Coup> coups;
+//	@OneToMany(mappedBy="coup")
+//	private List<Coup> coups;
 	
 	public int[][] rotation45deg(int[][] matriceEntree){
 		int size = matriceEntree.length;

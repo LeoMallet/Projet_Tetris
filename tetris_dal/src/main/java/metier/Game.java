@@ -26,11 +26,72 @@ public class Game {
 	@Column(name="GAM_DATE")
 	private Date dateGame;
 
-	//Potentiel problème ?
+<<<<<<< Updated upstream
+//	//Potentiel problème ?
+//	@OneToMany(mappedBy="coup")
+//	private List<Coup> coups;	
+//	
+//	@ManyToOne
+//	@JoinColumn(name="GAM_PLAYER_ID")
+//	private Game game;
+
+=======
+/*	//Potentiel problème ?
 	@OneToMany(mappedBy="coup")
-	private List<Coup> coups;	
+	private List<Coup> coups;	*/
 	
+>>>>>>> Stashed changes
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Date getDateGame() {
+		return dateGame;
+	}
+
+	public void setDateGame(Date dateGame) {
+		this.dateGame = dateGame;
+	}
+
+<<<<<<< Updated upstream
+//	public List<Coup> getCoups() {
+//		return coups;
+//	}
+//
+//	public void setCoups(List<Coup> coups) {
+//		this.coups = coups;
+//	}
+//
+//	public Game getGame() {
+//		return game;
+//	}
+//
+//	public void setGame(Game game) {
+//		this.game = game;
+//	}
+=======
+/*	public List<Coup> getCoups() {
+		return coups;
+	}
+
+	public void setCoups(List<Coup> coups) {
+		this.coups = coups;
+	}*/
+
+	public Game getGame() {
+		return game;
+	}
+
+	public void setGame(Game game) {
+		this.game = game;
+	}
+
 	@ManyToOne
 	@JoinColumn(name="GAM_PLAYER_ID")
 	private Game game;
+>>>>>>> Stashed changes
 }
