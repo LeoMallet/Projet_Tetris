@@ -31,7 +31,7 @@ public class Coup {
 	
 	@ManyToOne
 	@JoinColumn(name="GAM_ID")
-	private Partie partie;
+	private Game game;
 
 	public int getId() {
 		return id;
