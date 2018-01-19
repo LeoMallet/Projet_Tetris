@@ -78,7 +78,7 @@ public class Tetrimino {
 
 	@Override
 	public String toString() {
-		return "Tetrimino n�"+id+" nom=" + nom + ", couleur=" + couleur;
+		return "Tetrimino n."+id+" nom=" + nom + ", couleur=" + couleur;
 	}
 
 }
