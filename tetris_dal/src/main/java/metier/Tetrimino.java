@@ -33,8 +33,8 @@ public class Tetrimino {
 	@Column(name="TET_COULEUR")
 	private String couleur;
 
-//	@OneToMany(mappedBy="coup")
-//	private List<Coup> coups;
+	@OneToMany(mappedBy="tetrimino")
+	private List<Coup> coups;
 	
 	public int[][] rotation45deg(int[][] matriceEntree){
 		int size = matriceEntree.length;
@@ -46,13 +46,13 @@ public class Tetrimino {
 		return matriceRetour;	
 	}
 	
-//	public List<Coup> getCoups() {
-//		return coups;
-//	}
-//
-//	public void setCoups(List<Coup> coups) {
-//		this.coups = coups;
-//	}
+	public List<Coup> getCoups() {
+		return coups;
+	}
+
+	public void setCoups(List<Coup> coups) {
+		this.coups = coups;
+	}
 	
 	public int getId() {
 		return id;
