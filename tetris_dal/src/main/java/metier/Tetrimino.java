@@ -19,6 +19,8 @@ import org.springframework.cache.annotation.Cacheable;
 @Cache(usage=CacheConcurrencyStrategy.READ_ONLY	)
 @Table(name="tetrimino")
 public class Tetrimino {
+		
+
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -45,6 +47,14 @@ public class Tetrimino {
 		}
 		return matriceRetour;	
 	}
+	
+//	public List<Coup> getCoups() {
+//		return coups;
+//	}
+//
+//	public void setCoups(List<Coup> coups) {
+//		this.coups = coups;
+//	}
 	
 	public int getId() {
 		return id;

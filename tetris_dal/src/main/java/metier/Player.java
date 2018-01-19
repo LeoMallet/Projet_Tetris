@@ -51,11 +51,4 @@ public class Player {
 		this.mdp = mdp;
 	}
 
-	public List<Game> getGames() {
-		return games;
-	}
-
-	public void setGames(List<Game> games) {
-		this.games = games;
-	}*/
 }

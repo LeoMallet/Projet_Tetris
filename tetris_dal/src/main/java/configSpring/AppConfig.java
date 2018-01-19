@@ -23,6 +23,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 @EnableJpaRepositories("dao")
 @PropertySource("classpath:data-source.properties")
 @ComponentScan({"dao"})
+
 public class AppConfig {
 
 	@Autowired
@@ -59,6 +60,7 @@ public class AppConfig {
 		dataSource.setUrl(env.getProperty("sql.url"));
 		dataSource.setUsername(env.getProperty("sql.username"));
 		dataSource.setPassword(env.getProperty("sql.password"));
+
 		dataSource.setMaxTotal(10);
 		return dataSource;
 	}

@@ -25,16 +25,14 @@ public class Game {
 	
 	@Column(name="GAM_DATE")
 	private Date dateGame;
-
-
-//	//Potentiel problème ?
-//	@OneToMany(mappedBy="coup")
-//	private List<Coup> coups;	
-//	
-//	@ManyToOne
-//	@JoinColumn(name="GAM_PLAYER_ID")
-//	private Game game;
-
+	
+//	//Potentiel problï¿½me ?
+//		@OneToMany(mappedBy="coup")
+//		private List<Coup> coups;	
+//		
+//		@ManyToOne
+//		@JoinColumn(name="GAM_PLAYER_ID")
+//		private Game game;
 
 	public int getId() {
 		return id;
@@ -67,5 +65,7 @@ public class Game {
 //	public void setGame(Game game) {
 //		this.game = game;
 //	}
+
+
 
 }

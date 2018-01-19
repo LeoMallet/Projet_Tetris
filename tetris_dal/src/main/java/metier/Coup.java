@@ -25,6 +25,7 @@ public class Coup {
 	private int id;
 	
 	
+
 //	@ManyToOne
 //	@JoinColumn(name="TET_ID")
 //	private Tetrimino tetrimino;
