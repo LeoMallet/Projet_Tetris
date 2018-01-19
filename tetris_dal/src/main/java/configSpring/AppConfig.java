@@ -22,7 +22,11 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 // @EnableTransactionManagement
 @EnableJpaRepositories("dao")
 @PropertySource("classpath:data-source.properties")
+<<<<<<< Updated upstream
 @ComponentScan({ "dao" })
+=======
+@ComponentScan({"dao"})
+>>>>>>> Stashed changes
 public class AppConfig {
 
 	@Autowired
@@ -58,7 +62,11 @@ public class AppConfig {
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl(env.getProperty("sql.url"));
 		dataSource.setUsername(env.getProperty("sql.username"));
+<<<<<<< Updated upstream
 		dataSource.setPassword(env.getProperty("sql.password"));
+=======
+		dataSource.setPassword("root");
+>>>>>>> Stashed changes
 		dataSource.setMaxTotal(10);
 		return dataSource;
 	}
