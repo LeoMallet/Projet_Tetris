@@ -52,45 +52,4 @@ public class Player {
 		this.mdp = mdp;
 	}
 
-//	public List<Game> getGames() {
-//		return games;
-//	}
-//
-//	public void setGames(List<Game> games) {
-//		this.games = games;
-//	}
-}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getLogin() {
-		return login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
-	public String getMdp() {
-		return mdp;
-	}
-
-	public void setMdp(String mdp) {
-		this.mdp = mdp;
-	}
-
-	public List<Game> getGames() {
-		return games;
-	}
-
-	public void setGames(List<Game> games) {
-		this.games = games;
-	}
->>>>>>> Stashed changes
 }
