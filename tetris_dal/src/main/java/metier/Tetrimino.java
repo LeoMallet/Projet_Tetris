@@ -1,5 +1,7 @@
 package metier;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,7 +32,7 @@ public class Tetrimino {
 	private String couleur;
 
 	@OneToMany(mappedBy="coup")
-	private Coup coup;
+	private List<Coup> coups;
 	
 	public int[][] rotation45deg(int[][] matriceEntree){
 		int size = matriceEntree.length;
