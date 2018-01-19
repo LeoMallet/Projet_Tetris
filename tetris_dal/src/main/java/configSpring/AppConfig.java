@@ -22,7 +22,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 // @EnableTransactionManagement
 @EnableJpaRepositories("dao")
 @PropertySource("classpath:data-source.properties")
-@ComponentScan({ "configSpring","dao", "metier" })
+@ComponentScan({ "dao" })
 public class AppConfig {
 
 	@Autowired
@@ -57,8 +57,8 @@ public class AppConfig {
 		BasicDataSource dataSource = new BasicDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl(env.getProperty("sql.url"));
-		dataSource.setUsername("root");
-		dataSource.setPassword("root");
+		dataSource.setUsername(env.getProperty("sql.username"));
+		dataSource.setPassword(env.getProperty("sql.password"));
 		dataSource.setMaxTotal(10);
 		return dataSource;
 	}
@@ -67,7 +67,7 @@ public class AppConfig {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(BasicDataSource dataSource) {
 		LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
 		emf.setDataSource(dataSource);
-		emf.setPackagesToScan("configSpring","dao", "metier");
+		emf.setPackagesToScan("metier");
 		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		emf.setJpaVendorAdapter(vendorAdapter);
 		emf.setJpaProperties(this.hibernateProperties());
