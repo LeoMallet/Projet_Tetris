@@ -16,13 +16,13 @@ public class Player {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="GAM_ID")
+	@Column(name="PLA_ID")
 	private int id;
 	
-	@Column(name="GAM_LOGIN")
+	@Column(name="PLA_LOGIN")
 	private String login;
 	
-	@Column(name="GAM_MDP")
+	@Column(name="PLA_MDP")
 	private String mdp;
 	
 	@OneToMany(mappedBy="player")
@@ -39,8 +39,6 @@ public class Player {
 	public String getLogin() {
 		return login;
 	}
-	
-	//La phrase
 
 	public void setLogin(String login) {
 		this.login = login;
