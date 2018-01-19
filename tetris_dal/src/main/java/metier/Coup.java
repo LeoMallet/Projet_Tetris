@@ -28,6 +28,10 @@ public class Coup {
 	@ManyToOne
 	@JoinColumn(name="TET_ID")
 	private Tetrimino tetrimino;
+	
+	@ManyToOne
+	@JoinColumn(name="GAM_ID")
+	private Partie partie;
 
 	public int getId() {
 		return id;
