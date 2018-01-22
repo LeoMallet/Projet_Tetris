@@ -36,7 +36,7 @@ public class Tetrimino {
 	@Column(name="TET_FORME")
 	private String formeTetrimino;
 
-	@OneToMany(mappedBy="coup")
+	@OneToMany(mappedBy="tetrimino")
 	private List<Coup> coups;
 	
 	private int[][] matriceTetrimino=new int[5][5];
