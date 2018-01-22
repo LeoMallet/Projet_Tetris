@@ -26,8 +26,7 @@ public class Game {
 	@Column(name="GAM_DATE")
 	private Date dateGame;
 	
-	//Potentiel probl�me ?
-		@OneToMany(mappedBy="coup")
+		@OneToMany(mappedBy="game")
 		private List<Coup> coups;	
 		
 		@ManyToOne
