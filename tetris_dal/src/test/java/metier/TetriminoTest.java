@@ -69,7 +69,6 @@ public class TetriminoTest {
 			
 			for(int i=0;i<matrice.length;i++) {
 				for(int j=0;j<matrice.length;j++) {
-					System.out.println(matrice[i][j] + " "+matrice2[i][j]);
 					assertEquals(matrice2[i][j],matrice[i][j]);
 				}
 			}
