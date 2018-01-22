@@ -20,8 +20,8 @@ public class Admin extends User {
 	@Column(name="ADM_LOGIN")
 	private String login;
 	
-	@Column(name="ADM_PASSWORD")
-	private String password;
+	@Column(name="ADM_MDP")
+	private String mdp;
 	
 	@OneToOne(mappedBy="admin")
 	private Faq faq;
@@ -43,11 +43,11 @@ public class Admin extends User {
 	}
 
 	public String getMdp() {
-		return password;
+		return mdp;
 	}
 
-	public void setMdp(String password) {
-		this.password = password;
+	public void setMdp(String mdp) {
+		this.mdp = mdp;
 	}
 
 	public Faq getFaq() {

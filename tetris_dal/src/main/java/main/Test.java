@@ -4,9 +4,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import configSpring.AppConfig;
 import dao.ITetriminoDAO;
-import dao.IUserDAO;
-import metier.Admin;
-import metier.Player;
 import metier.Tetrimino;
 
 public class Test {
@@ -14,8 +11,7 @@ public class Test {
 	public static void main(String[] args) {
 
 		//testSpringHibernate();
-		//testMatrice();
-		testAuth();
+		testMatrice();
 		
 	}
 	
@@ -68,20 +64,6 @@ public class Test {
 			System.out.println(myTetrimino);
 			myContext.close();
 		
-		}
-		static void testAuth() {
-			AnnotationConfigApplicationContext myContext = new AnnotationConfigApplicationContext(AppConfig.class);
-			IUserDAO daoUser = myContext.getBean(IUserDAO.class);
-			
-			Admin myAdmin = new Admin();
-			Player myPlayer = new Player();
-			
-			myAdmin.setLogin("toto");
-			myAdmin.setPassword("1234");
-			myPlayer.setLogin("blabla");
-			myPlayer.setMdp("010101");
-			
-			daoUser.save(myAdmin);
 		}
 	
 }
