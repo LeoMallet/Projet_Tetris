@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -32,6 +33,10 @@ public class Game {
 		@ManyToOne
 		@JoinColumn(name="GAM_PLAYER_ID")
 		private Player player;
+		
+		@OneToOne
+		@JoinColumn(name="GAM_SCORE_ID")
+		private Game game;
 
 	public int getId() {
 		return id;
