@@ -82,6 +82,7 @@ public class Test {
 			myPlayer.setMdp("010101");
 			
 			daoUser.save(myAdmin);
+			
 		}
 	
 }
