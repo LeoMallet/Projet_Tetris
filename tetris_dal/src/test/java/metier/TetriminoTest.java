@@ -79,8 +79,12 @@ public class TetriminoTest {
 		tetrimino = new Tetrimino();
 		try {
 			int[][] matrice = tetrimino.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2)");
+			matrice=tetrimino.resizeMatrice(2, matrice);
 			matrice=tetrimino.rotation45deg(matrice);
+						
 			int[][] matrice2 = tetrimino.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,0)");
+			matrice2=tetrimino.resizeMatrice(2, matrice2);
+			
 			assertEquals(matrice2, matrice);
 			
 		} catch(Exception e){
