@@ -55,32 +55,13 @@ public class TetriminoTest {
 		}
 	}
 
-	@Test
-	@Rollback(true)
-	public void resizeMatriceTest() {
 
-		tetrimino = new Tetrimino();
-		try {
-			int[][] matrice = tetrimino.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2);(3,2);(2,1)");
-			matrice=tetrimino.resizeMatrice(2, matrice);
-			assertNotNull(matrice);
-		} catch(Exception e){
-			e.printStackTrace();
-			fail("echec");
-		}
-	}
-	
-
-
-
-	@SuppressWarnings("deprecation")
 	@Test
 	@Rollback(true)
 	public void rotation45degTest() {
 		tetrimino = new Tetrimino();
 		try {
 			int[][] matrice = tetrimino.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2)");
-			matrice=tetrimino.resizeMatrice(2, matrice);
 			matrice=tetrimino.rotation45deg(matrice);
 						
 			int[][] matrice2 = tetrimino.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,0)");
@@ -88,12 +69,13 @@ public class TetriminoTest {
 			
 			for(int i=0;i<matrice.length;i++) {
 				for(int j=0;j<matrice.length;j++) {
+					System.out.println(matrice[i][j] + " "+matrice2[i][j]);
 					assertEquals(matrice2[i][j],matrice[i][j]);
 				}
 			}
 			
 		} catch(Exception e){
-			e.printStackTrace();
+			fail("echec");
 		}
 	}
 	
