@@ -1,8 +1,8 @@
 package metier;
 
 import static org.junit.Assert.assertEquals;
-
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -62,10 +62,11 @@ public class TetriminoTest {
 		tetrimino = new Tetrimino();
 		try {
 			int[][] matrice = tetrimino.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2);(3,2);(2,1)");
-			matrice=tetrimino.resizeMatrice(3, matrice);
+			matrice=tetrimino.resizeMatrice(2, matrice);
 			assertNotNull(matrice);
 		} catch(Exception e){
 			e.printStackTrace();
+			fail("echec");
 		}
 	}
 	
@@ -85,7 +86,11 @@ public class TetriminoTest {
 			int[][] matrice2 = tetrimino.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,0)");
 			matrice2=tetrimino.resizeMatrice(2, matrice2);
 			
-			assertEquals(matrice2, matrice);
+			for(int i=0;i<matrice.length;i++) {
+				for(int j=0;j<matrice.length;j++) {
+					assertEquals(matrice2[i][j],matrice[i][j]);
+				}
+			}
 			
 		} catch(Exception e){
 			e.printStackTrace();
