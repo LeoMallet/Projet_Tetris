@@ -1,9 +1,7 @@
 package metier;
 
-<<<<<<< HEAD
-=======
 import static org.junit.Assert.assertEquals;
->>>>>>> master
+
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.BeforeClass;
@@ -18,13 +16,6 @@ import configSpring.AppConfig;
 import dao.ITetriminoDAO;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-<<<<<<< HEAD
-@ContextConfiguration(classes = { AppConfig.class })
-public class TetriminoTest {
-
-	@Autowired(required = false)
-	private ITetriminoDAO daoT;
-=======
 @ContextConfiguration(classes = {AppConfig.class})
 public class TetriminoTest {
 
@@ -33,19 +24,15 @@ public class TetriminoTest {
 	
 	@Autowired(required=false)
 	private static Tetrimino tetrimino;
->>>>>>> master
+
 
 	@Test
 	public void daoTest() {
 		assertNotNull(daoT);
 	}
 
-<<<<<<< HEAD
-	private static Tetrimino tetrimino;
-=======
-	
->>>>>>> master
 
+	
 	@BeforeClass
 	public static void preparation() {
 		tetrimino = new Tetrimino();
@@ -56,17 +43,12 @@ public class TetriminoTest {
 	// @Transactional
 	@Rollback(true)
 	public void getMatriceTetriminoTest() {
-<<<<<<< HEAD
+
 		Tetrimino t = new Tetrimino();
 		try {
 		
 		int[][] matrice = t.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2);(3,2);(2,1)");
-=======
-		tetrimino = new Tetrimino();
-		try {
-		
-		int[][] matrice = tetrimino.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2);(3,2);(2,1)");
->>>>>>> master
+
 		assertNotNull(matrice);
 		} catch(Exception e){
 			e.printStackTrace();
@@ -76,26 +58,20 @@ public class TetriminoTest {
 	@Test
 	@Rollback(true)
 	public void resizeMatriceTest() {
-<<<<<<< HEAD
-		Tetrimino t = new Tetrimino();
-		try {
-			int[][] matrice = t.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2);(3,2);(2,1)");
-			matrice=t.rotation45deg(matrice);
-=======
+
 		tetrimino = new Tetrimino();
 		try {
 			int[][] matrice = tetrimino.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2);(3,2);(2,1)");
 			matrice=tetrimino.resizeMatrice(3, matrice);
->>>>>>> master
 			assertNotNull(matrice);
 		} catch(Exception e){
 			e.printStackTrace();
 		}
 	}
 	
-<<<<<<< HEAD
-}
-=======
+
+
+
 	@SuppressWarnings("deprecation")
 	@Test
 	@Rollback(true)
@@ -113,4 +89,3 @@ public class TetriminoTest {
 	}
 	
 }
->>>>>>> master

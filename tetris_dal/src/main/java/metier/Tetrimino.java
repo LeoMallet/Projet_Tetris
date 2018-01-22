@@ -55,6 +55,17 @@ public class Tetrimino {
 		return matriceTetrimino;
 	}
 	
+	public int[][] resizeMatrice(int max, int[][] matrice){
+        int[][] matriceRetour = new int[max+1][max+1];
+        
+        for(int i=0;i<matriceRetour.length;i++) {
+            for(int j=0;j<matriceRetour.length;j++)
+                matriceRetour[i][j]=matrice[i][j];
+        }
+                
+        return matriceRetour;
+    }
+	
 	public int[][] rotation45deg(int[][] matriceEntree){
 		int size = matriceEntree.length;
 		int[][] matriceRetour = new int[size][size];
