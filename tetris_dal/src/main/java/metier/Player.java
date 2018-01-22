@@ -22,8 +22,8 @@ public class Player {
 	@Column(name="PLA_LOGIN")
 	private String login;
 	
-	@Column(name="PLA_MDP")
-	private String mdp;
+	@Column(name="PLA_PASSWORD")
+	private String password;
 	
 	@OneToMany(mappedBy="player")
 	private List<Game> games;
@@ -45,11 +45,11 @@ public class Player {
 	}
 
 	public String getMdp() {
-		return mdp;
+		return password;
 	}
 
-	public void setMdp(String mdp) {
-		this.mdp = mdp;
+	public void setMdp(String password) {
+		this.password = password;
 	}
 
 }
