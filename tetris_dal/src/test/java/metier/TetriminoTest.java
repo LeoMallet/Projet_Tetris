@@ -1,4 +1,4 @@
-package tetris_dao;
+package metier;
 
 import static org.junit.Assert.*;
 
