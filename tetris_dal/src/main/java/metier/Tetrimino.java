@@ -45,11 +45,10 @@ public class Tetrimino {
 		String[] tab = formeTetrimino.split(";");
 		for(int i=0;i<tab.length;i++) {
 			tab[i]=tab[i].substring(1, tab.length);
-			System.out.println(tab[i]);
 			String[] tab2 = tab[i].split(",");
 			int x = Integer.parseInt(tab2[0]);
 			int y = Integer.parseInt(tab2[1]);
-			this.matriceTetrimino[x][y]=1;
+			this.matriceTetrimino[y][x]=1;
 		}
 		
 		return matriceTetrimino;
