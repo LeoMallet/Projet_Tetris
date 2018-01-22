@@ -35,7 +35,6 @@ public class Game {
 		private Player player;
 		
 		@OneToOne
-		@JoinColumn(name="GAM_SCORE_ID")
 		private Score score;
 
 	public int getId() {
