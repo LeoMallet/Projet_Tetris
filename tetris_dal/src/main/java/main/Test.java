@@ -17,7 +17,7 @@ public class Test {
 	
 	static void testMatrice() {
 		Tetrimino t = new Tetrimino();
-		int[][] matrice =t.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2);(3,2);(2,1)");
+		int[][] matrice =t.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2)");
 		for(int i=0;i<matrice.length;i++) {
 			for(int j=0;j<matrice.length;j++) {
 				System.out.print(matrice[i][j]+" ");
