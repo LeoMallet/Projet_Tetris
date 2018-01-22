@@ -43,40 +43,17 @@ public class Tetrimino {
 	
 	public int[][] getMatriceTetrimino(String formeTetrimino){
 		String[] tab = formeTetrimino.split(";");
-		int xMax=0;
-		int yMax=0;
-		
 		for(int i=0;i<tab.length;i++) {
-			tab[i]=tab[i].substring(1, 4);
+			tab[i]=tab[i].substring(1, tab.length);
 			System.out.println(tab[i]);
 			String[] tab2 = tab[i].split(",");
-			int y = Integer.parseInt(tab2[0]);
-			if(y>yMax)
-				yMax=y;
-			int x = Integer.parseInt(tab2[1]);
-			if(x>xMax)
-				xMax=x;
+			int x = Integer.parseInt(tab2[0]);
+			int y = Integer.parseInt(tab2[1]);
 			this.matriceTetrimino[x][y]=1;
 		}
-		if(xMax>yMax)
-			matriceTetrimino = resizeMatrice(xMax,matriceTetrimino);
-		else
-			matriceTetrimino = resizeMatrice(yMax,matriceTetrimino);
 		
 		return matriceTetrimino;
 	}
-	
-	public int[][] resizeMatrice(int max, int[][] matrice){
-		int[][] matriceRetour = new int[max+1][max+1];
-		
-		for(int i=0;i<matriceRetour.length;i++) {
-			for(int j=0;j<matriceRetour.length;j++)
-				matriceRetour[i][j]=matrice[i][j];
-		}
-				
-		return matriceRetour;
-	}
-	
 	
 	public int[][] rotation45deg(int[][] matriceEntree){
 		int size = matriceEntree.length;
