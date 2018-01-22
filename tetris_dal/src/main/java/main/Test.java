@@ -11,7 +11,7 @@ public class Test {
 	public static void main(String[] args) {
 
 		//testSpringHibernate();
-		testMatrice();
+		//testMatrice();
 		
 	}
 	
@@ -53,7 +53,7 @@ public class Test {
 	}
 	
 
-		static void testSpringHibernate() {
+	static void testSpringHibernate() {
 			AnnotationConfigApplicationContext myContext = new AnnotationConfigApplicationContext(AppConfig.class);
 			
 			ITetriminoDAO daoTetrimino = myContext.getBean(ITetriminoDAO.class);

@@ -26,17 +26,7 @@ public class User  implements Serializable {
 		
 		@Column(name="USE_PASSWORD")
 		private String password;
-		
-		public User (int id, String login, String password) {
-			
-			this.id = id;
-			this.login = login;
-			this.password = password;
-		}
-		
-		public User() {
-			
-		}
+
 
 		@Override
 		public String toString() {

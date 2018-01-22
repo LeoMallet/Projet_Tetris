@@ -2,54 +2,26 @@ package metier;
 
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="player")
-public class Player {
+@PrimaryKeyJoinColumn(name="PLA_ID", referencedColumnName="USE_ID")
+public class Player extends User {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="PLA_ID")
-	private int id;
-	
-	@Column(name="PLA_LOGIN")
-	private String login;
-	
-	@Column(name="PLA_MDP")
-	private String mdp;
 	
 	@OneToMany(mappedBy="player")
 	private List<Game> games;
 
-	public int getId() {
-		return id;
+	public List<Game> getGames() {
+		return games;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getLogin() {
-		return login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
-	public String getMdp() {
-		return mdp;
-	}
-
-	public void setMdp(String mdp) {
-		this.mdp = mdp;
+	public void setGames(List<Game> games) {
+		this.games = games;
 	}
 
 }

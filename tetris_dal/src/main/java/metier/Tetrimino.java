@@ -47,7 +47,7 @@ public class Tetrimino {
 		int yMax=0;
 		
 		for(int i=0;i<tab.length;i++) {
-			tab[i]=tab[i].substring(1, tab.length);
+			tab[i]=tab[i].substring(1, 4);
 			String[] tab2 = tab[i].split(",");
 			int x = Integer.parseInt(tab2[0]);
 			int y = Integer.parseInt(tab2[1]);
