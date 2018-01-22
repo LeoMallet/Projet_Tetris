@@ -1,6 +1,7 @@
 package metier;
 
 import static org.junit.Assert.assertEquals;
+
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.BeforeClass;
@@ -24,13 +25,14 @@ public class TetriminoTest {
 	@Autowired(required=false)
 	private static Tetrimino tetrimino;
 
+
 	@Test
 	public void daoTest() {
 		assertNotNull(daoT);
 	}
 
-	
 
+	
 	@BeforeClass
 	public static void preparation() {
 		tetrimino = new Tetrimino();
@@ -41,10 +43,12 @@ public class TetriminoTest {
 	// @Transactional
 	@Rollback(true)
 	public void getMatriceTetriminoTest() {
-		tetrimino = new Tetrimino();
+
+		Tetrimino t = new Tetrimino();
 		try {
 		
-		int[][] matrice = tetrimino.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2);(3,2);(2,1)");
+		int[][] matrice = t.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2);(3,2);(2,1)");
+
 		assertNotNull(matrice);
 		} catch(Exception e){
 			e.printStackTrace();
@@ -54,6 +58,7 @@ public class TetriminoTest {
 	@Test
 	@Rollback(true)
 	public void resizeMatriceTest() {
+
 		tetrimino = new Tetrimino();
 		try {
 			int[][] matrice = tetrimino.getMatriceTetrimino("(0,0);(0,1);(0,2);(1,2);(3,2);(2,1)");
@@ -64,6 +69,9 @@ public class TetriminoTest {
 		}
 	}
 	
+
+
+
 	@SuppressWarnings("deprecation")
 	@Test
 	@Rollback(true)
