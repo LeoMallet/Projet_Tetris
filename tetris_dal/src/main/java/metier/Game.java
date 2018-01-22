@@ -32,7 +32,7 @@ public class Game {
 		
 		@ManyToOne
 		@JoinColumn(name="GAM_PLAYER_ID")
-		private Game game;
+		private Player player;
 
 	public int getId() {
 		return id;
